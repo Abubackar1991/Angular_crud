@@ -69,6 +69,7 @@ export class HomeComponent implements OnInit {
     this.httpProvider.getAllEmployee().subscribe(
       (data: any) => {
         if (data != null && data.body != null) {
+          console.log(data);
           var resultData = data.body;
           if (resultData) {
             this.employeeList = resultData;
